@@ -1,0 +1,4 @@
+script: "./gradlew cucumber"
+language: java
+jdk:
+  - oraclejdk8
