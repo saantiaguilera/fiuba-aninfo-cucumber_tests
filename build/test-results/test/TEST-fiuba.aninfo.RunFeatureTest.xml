@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fiuba.aninfo.RunFeatureTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="ARAR016962" time="0.0">
+  <properties/>
+  <system-out><![CDATA[# language: en
+Feature: Project manager features between his employees and the bussiness elements, such as tickets of the employees projects
+
+  Scenario: An issue has just been created and has to be assigned to a user who will be in charge of its develop ?[90m# project_manager.feature:5?[0m
+    ?[33mGiven ?[0m?[33ma user whose name is "Santiago"?[0m
+    ?[36mWhen ?[0m?[36ma created ticket with title "?[0m?[36m?[1mCant login correctly?[0m?[36m" its assigned to him?[0m                                  ?[90m# IssueAssignTest.whenHeGetsAsignedATicketOf(String)?[0m
+    ?[36mThen ?[0m?[36m"?[0m?[36m?[1mSantiago?[0m?[36m" becomes an assignee of the ticket?[0m                                                            ?[90m# IssueAssignTest.thenTheUserIsAnAssigneeOfTheTicket(String)?[0m
+
+1 Scenarios (?[33m1 undefined?[0m)
+3 Steps (?[36m2 skipped?[0m, ?[33m1 undefined?[0m)
+0m0.000s
+
+
+You can implement missing steps with the snippets below:
+
+@Given("^a user whose name is \"(.*?)\"$")
+public void a_user_whose_name_is(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

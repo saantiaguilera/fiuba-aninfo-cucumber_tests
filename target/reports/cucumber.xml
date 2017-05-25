@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0">
+<testcase classname="Project manager features between his employees and the bussiness elements, such as tickets of the employees projects" name="An issue has just been created and has to be assigned to a user who will be in charge of its develop" time="0">
+<skipped><![CDATA[Given a user whose name is "Santiago".......................................undefined
+When a created ticket with title "Cant login correctly" its assigned to him.skipped
+Then "Santiago" becomes an assignee of the ticket...........................skipped
+]]></skipped>
+</testcase>
+</testsuite>
