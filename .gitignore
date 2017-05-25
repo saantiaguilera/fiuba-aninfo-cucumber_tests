@@ -1,0 +1,6 @@
+'pretty',o
+re
+.settings
+*.iml
+**/target
+**/.idea
