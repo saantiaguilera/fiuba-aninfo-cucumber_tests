@@ -14,7 +14,7 @@ public class IssueAssignTest {
     private User user;
     private Card card;
 
-    @Given("dado un usuario que se llama \"(.+)\"$")
+    @Given("^a user whose name is \"(.*?)\"$")
     public void givenAUserWith(String name) throws Exception {
         user = new User();
         user.setName(name);
@@ -22,7 +22,7 @@ public class IssueAssignTest {
         Assert.assertEquals(name, user.getName());
     }
 
-    @When("a created ticket with title \"(.*)\" its assigned to him")
+    @When("^a created ticket with title \"(.*?)\" its assigned to him$")
     public void whenHeGetsAsignedATicketOf(String title) {
         card = new Card();
         card.setTitle(title);
@@ -31,12 +31,10 @@ public class IssueAssignTest {
         Assert.assertEquals(title, card.getTitle());
     }
 
-    @Then("\"(.*)\" becomes an assignee of the ticket")
+    @Then("^\"(.*?)\" becomes an assignee of the ticket$")
     public void thenTheUserIsAnAssigneeOfTheTicket(String userName) {
         Assert.assertNotNull(card);
         Assert.assertEquals(userName, user.getName());
         Assert.assertTrue(card.isAssignee(user));
-
-        throw new RuntimeException("hola");
     }
 }
