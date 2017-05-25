@@ -15,7 +15,7 @@ public class IssueTicketMarkingTest {
   @Given("^a card created as internal")
   public void givenACardCreatedAsInternal() throws Exception {
     card = new Card();
-    card.classification = Card.INTERNAL;
+    card.setClassification(Card.INTERNAL);
     Assert.assertEquals(card.getClassification(), Classification.INTERNAL);
   }
 
