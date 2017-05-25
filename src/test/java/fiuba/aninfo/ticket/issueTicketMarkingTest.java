@@ -12,21 +12,20 @@ import org.junit.Assert;
 public class IssueTicketMarkingTest {
   private Card card = null;
 
-  @Given("^a card created as internal")
+  @Given("^a card as internal")
   public void givenACardCreatedAsInternal() throws Exception {
     card = new Card();
-    card.setClassification(Card.INTERNAL);
-    Assert.assertEquals(card.getClassification(), Classification.INTERNAL);
+    card.setClassification(Card.Classification.INTERNAL);
+    Assert.assertEquals(card.getClassification(), Card.Classification.INTERNAL);
   }
 
-  @When("^a user wants to tag it as external")
-  public void whenAUserWantsToTagItAsExternal(Classification classification) throws Exception {
-    card.setClassification(classification);
-    Assert.assertEquals(classification, Classification.EXTERNAL);
+  @When("^a user wants to tag it as \"(.*?)\"")
+  public void whenAUserWantsToTagItAsExternal(String classification) throws Exception {
+    card.setClassification(Card.Classification.valueOf(classification));
   }
 
-  @Then("^it should be left marked as external")
-  public void thenItShouldBetaggedAsExternal() throws Exception {
-    Assert.assertEquals(card.getClassification(), Classification.EXTERNAL);
+  @Then("^it should be left marked as \"(.*?)\"")
+  public void thenItShouldBetaggedAsExternal(String classification) throws Exception {
+    Assert.assertEquals(card.getClassification().toString(), classification);
   }
 }
