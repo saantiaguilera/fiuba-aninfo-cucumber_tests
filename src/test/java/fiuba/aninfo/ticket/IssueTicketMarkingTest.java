@@ -14,14 +14,14 @@ public class IssueTicketMarkingTest {
 
   @Given("^a card as internal")
   public void givenACardCreatedAsInternal() throws Exception {
-    card = new Card();
-    card.setClassification(Card.Classification.INTERNAL);
+	 card = new Card();
     Assert.assertEquals(card.getClassification(), Card.Classification.INTERNAL);
   }
 
   @When("^a user wants to tag it as \"(.*?)\"")
   public void whenAUserWantsToTagItAsExternal(String classification) throws Exception {
-    card.setClassification(Card.Classification.valueOf(classification));
+	 User who = new UserInternal();
+	 who.setCardClassification(card, Card.Classification.valueOf(classification));
   }
 
   @Then("^it should be left marked as \"(.*?)\"")

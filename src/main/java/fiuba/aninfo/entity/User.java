@@ -2,11 +2,11 @@ package fiuba.aninfo.entity;
 
 import java.lang.String;
 
-public class User {
+public abstract class User {
 
     private long id;
     private String name;
-    private String area;
+    private String contactNumber;
 
     public void setId(long id) {
         this.id = id;
@@ -16,8 +16,8 @@ public class User {
         this.name = name;
     }
 
-    public void setArea(String area) {
-        this.area = area;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
     public long getId() {
@@ -28,9 +28,12 @@ public class User {
         return name;
     }
 
-    public String getArea() {
-        return area;
+    public String getContactNumber() {
+        return contactNumber;
     }
+
+    public abstract boolean addCardAssignee(Card which, User who);
+    public abstract boolean setCardClassification(Card which, Card.Classification how);
 
     @Override
     public boolean equals(final Object obj) {

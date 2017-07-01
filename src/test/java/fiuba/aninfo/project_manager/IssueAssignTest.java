@@ -16,7 +16,7 @@ public class IssueAssignTest {
 
     @Given("^a user whose name is \"(.*?)\"$")
     public void givenAUserWith(String name) throws Exception {
-        user = new User();
+        user = new UserExternal();
         user.setName(name);
 
         Assert.assertEquals(name, user.getName());
