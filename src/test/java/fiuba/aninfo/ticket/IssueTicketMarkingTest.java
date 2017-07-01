@@ -1,6 +1,7 @@
 package fiuba.aninfo.ticket;
 
 import fiuba.aninfo.entity.User;
+import fiuba.aninfo.entity.UserInternal;
 import fiuba.aninfo.entity.Card;
 
 import cucumber.api.java.en.Given;
@@ -14,7 +15,8 @@ public class IssueTicketMarkingTest {
 
   @Given("^a card as internal")
   public void givenACardCreatedAsInternal() throws Exception {
-	 card = new Card();
+	 User someone = new UserInternal();
+	 card = someone.newCard();
     Assert.assertEquals(card.getClassification(), Card.Classification.INTERNAL);
   }
 

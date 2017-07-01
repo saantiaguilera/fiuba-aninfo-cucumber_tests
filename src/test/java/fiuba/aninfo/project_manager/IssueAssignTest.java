@@ -1,6 +1,7 @@
 package fiuba.aninfo.project_manager;
 
 import fiuba.aninfo.entity.User;
+import fiuba.aninfo.entity.UserInternal;
 import fiuba.aninfo.entity.Card;
 
 import cucumber.api.java.en.Given;
@@ -16,7 +17,7 @@ public class IssueAssignTest {
 
     @Given("^a user whose name is \"(.*?)\"$")
     public void givenAUserWith(String name) throws Exception {
-        user = new UserExternal();
+        user = new UserInternal();
         user.setName(name);
 
         Assert.assertEquals(name, user.getName());
@@ -24,7 +25,7 @@ public class IssueAssignTest {
 
     @When("^a created ticket with title \"(.*?)\" its assigned to him$")
     public void whenHeGetsAsignedATicketOf(String title) {
-        card = new Card();
+		  card = user.newCard();
         card.setTitle(title);
         card.addAssignee(user);
 

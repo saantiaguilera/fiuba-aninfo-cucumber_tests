@@ -31,6 +31,10 @@ public abstract class User {
     public String getContactNumber() {
         return contactNumber;
     }
+	
+	 public Card newCard() {
+	 	 return new Card();
+	 }
 
     public abstract boolean addCardAssignee(Card which, User who);
     public abstract boolean setCardClassification(Card which, Card.Classification how);

@@ -6,3 +6,4 @@ re
 **/.idea
 build/
 *.DS_Store
+.gradle/*
