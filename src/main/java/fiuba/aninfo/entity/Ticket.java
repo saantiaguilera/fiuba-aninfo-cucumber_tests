@@ -4,7 +4,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Card {
+public class Ticket {
 
     private long id;
     private long estimation; // In Hs
@@ -15,7 +15,7 @@ public class Card {
 
     private List<User> assignees;
 
-    public Card() {
+    public Ticket() {
         assignees = new ArrayList<User>();
         classification = Classification.INTERNAL;
     }
@@ -39,16 +39,6 @@ public class Card {
     public void setClassification(Classification classification) {
         this.classification = classification;
     }
-    
-    public void addAssignee(User user) {
-        if (!assignees.contains(user)) {
-            assignees.add(user);
-        }
-    }
-
-    public boolean removeAssignee(User user) {
-        return assignees.remove(user);
-    }
 
     public Classification getClassification() {
         return classification;
@@ -61,6 +51,10 @@ public class Card {
     public List<User> getAssignees() {
         return new ArrayList<User>(assignees);
     }
+	
+	 public void addAssignee(User user) {
+		  assignees.add(user);
+	 }
 
     public long getId() {
         return id;
