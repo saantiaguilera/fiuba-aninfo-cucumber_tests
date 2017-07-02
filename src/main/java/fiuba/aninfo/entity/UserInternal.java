@@ -12,12 +12,12 @@ public class UserInternal extends User {
 		return area;
 	}
 
-	public boolean setCardClassification(Card which, Card.Classification how) {
+	public boolean setTicketClassification(Ticket which, Ticket.Classification how) {
 		which.setClassification(how);
 		return true;
 	}
 
-	public boolean addCardAssignee(Card which, User who) {
+	public boolean addTicketAssignee(Ticket which, User who) {
 		which.addAssignee(who);
 		return true;
 	}

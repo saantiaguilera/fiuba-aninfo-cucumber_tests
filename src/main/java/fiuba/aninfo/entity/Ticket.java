@@ -4,7 +4,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Card {
+public class Ticket {
 
     private long id;
     private long estimation; // In Hs
@@ -15,7 +15,7 @@ public class Card {
 
     private List<User> assignees;
 
-    public Card() {
+    public Ticket() {
         assignees = new ArrayList<User>();
         classification = Classification.INTERNAL;
     }

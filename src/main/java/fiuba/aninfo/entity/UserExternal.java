@@ -2,11 +2,11 @@ package fiuba.aninfo.entity;
 
 public class UserExternal extends User {
 
-	public boolean setCardClassification(Card which, Card.Classification how) {
+	public boolean setTicketClassification(Ticket which, Ticket.Classification how) {
 		return false; // You cant.
 	}
 
-	public boolean addCardAssignee(Card which, User who) {
+	public boolean addTicketAssignee(Ticket which, User who) {
 		return false; // You cant.
 	}
 

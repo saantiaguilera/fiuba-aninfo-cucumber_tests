@@ -32,12 +32,12 @@ public abstract class User {
         return contactNumber;
     }
 	
-	 public Card newCard() {
-	 	 return new Card();
+	 public Ticket newTicket() {
+	 	 return new Ticket();
 	 }
 
-    public abstract boolean addCardAssignee(Card which, User who);
-    public abstract boolean setCardClassification(Card which, Card.Classification how);
+    public abstract boolean addTicketAssignee(Ticket which, User who);
+    public abstract boolean setTicketClassification(Ticket which, Ticket.Classification how);
 
     @Override
     public boolean equals(final Object obj) {
